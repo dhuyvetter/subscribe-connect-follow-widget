@@ -368,7 +368,7 @@ class SCFW_Widget extends WP_Widget {
 		$widget_ops = array( 'classname' => 'scfw', 'description' => __('Image links to subscription services and social networking sites.', 'scfw') );
 
 		/* Widget control settings. */
-		$control_ops = array( 'width' => 320, 'height' => 700, 'id_base' => 'scfw' );
+		$control_ops = array( 'id_base' => 'scfw' );
 
 		/* Create the widget. */
 		$this->WP_Widget( 'scfw', __('Subscribe / Connect / Follow Widget', 'scfw'), $widget_ops, $control_ops );
@@ -385,6 +385,10 @@ class SCFW_Widget extends WP_Widget {
 		$services = $this->services;
 
 		$item_template = $this->item_template($instance['format'], $instance['window']);
+
+		if( isset( $instance['num_items'] ) && intval($instance['num_items']) ) {
+			$this->num_items = intval($instance['num_items']);
+		}
 		
 		$output = "";		
 			
@@ -433,6 +437,13 @@ class SCFW_Widget extends WP_Widget {
 		$instance['format'] = $new_instance['format'];
 		$instance['align'] = $new_instance['align'];
 		$instance['window'] = $new_instance['window'];
+
+		if( isset( $new_instance['num_items'] ) && intval($new_instance['num_items']) ) {
+			$this->num_items = intval($new_instance['num_items']);
+		}
+
+		$instance['num_items'] = $this->num_items;
+
 		
 		for($i = 0; $i < $this->num_items; $i++) {
 			$instance["item-{$i}"] = $new_instance["item-{$i}"];
@@ -454,6 +465,11 @@ class SCFW_Widget extends WP_Widget {
 		$format_selected[$instance['format']] = ' selected="selected"'; 
 		$align_selected[$instance['align']] = ' selected="selected"';
 		$window_selected[$instance['window']] = ' selected="selected"';
+
+		if( isset( $instance['num_items'] ) && intval($instance['num_items']) ) {
+			$this->num_items = intval($instance['num_items']);
+		}
+
 		
 		?>
 
@@ -491,6 +507,12 @@ class SCFW_Widget extends WP_Widget {
 				<option value="new"<?php echo $window_selected['new']; ?>>New window</option>
 			</select>
 		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'num_items' ); ?>"><?php _e('Number of items:', 'scfw'); ?></label>
+			<input type="number" id="<?php echo $this->get_field_id( 'num_items' ); ?>" name="<?php echo $this->get_field_name( 'num_items' ); ?>" value="<?php echo $this->num_items; ?>" min="1" max="50" step="1" style="width: 4em;" />
+		</p>
+
 
 		<p><strong>Services</strong></p>
 		<?php for($i = 0; $i < $this->num_items; $i++) { 
