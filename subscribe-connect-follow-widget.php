@@ -395,6 +395,9 @@ class SCFW_Widget extends WP_Widget {
 		for($i = 0; $i < $this->num_items; $i++) {
 			if(!$instance["itemval-{$i}"] || !$instance["item-{$i}"] || $instance["item-{$i}"] == "----SELECT----") continue;
 			$url = str_replace('{user_input}', $instance["itemval-{$i}"], $services[$instance["item-{$i}"]]['url']);
+			if( "{user_input}" == $services[$instance["item-{$i}"]]['url'] ) {
+				$url = esc_url( $url );
+			}
 			$item = str_replace('{url}', $url, $item_template);
 			$item = str_replace('{description}', $services[$instance["item-{$i}"]]['description'], $item);
 			$item = str_replace('{user_input}', $instance["itemval-{$i}"], $item);
