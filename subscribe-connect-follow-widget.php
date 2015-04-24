@@ -21,6 +21,13 @@ class SCFW_Widget extends WP_Widget {
 	private $num_items = 5;
 
 	private $services = array (
+		"behance" => array (
+			"name" => "Behance",
+			"description" => "Behance Portfolio",
+			"option_text" => "Behance (username)",
+			"image" => "behance.png",
+			"url" => "https://www.behance.net/{user_input}"
+		),
 		"blogger" => array (
 			"name" => "Blogger Blog",
 			"description" => "Blogger Blog",
@@ -63,6 +70,13 @@ class SCFW_Widget extends WP_Widget {
 			"image" => "dribbble.png",
 			"url" => "https://dribbble.com/{user_input}"
 		),
+		"email" => array (
+			"name" => "Email",
+			"description" => "Send an email to {user_input}",
+			"option_text" => "Email Address",
+			"image" => "email.png",
+			"url" => "mailto:{user_input}"
+		),
 		"etsy" => array (
 			"name" => "Etsy",
 			"description" => "Shop with Etsy",
@@ -97,6 +111,13 @@ class SCFW_Widget extends WP_Widget {
 			"option_text" => "Flickr (URL)",
 			"image" => "flickr.png",
 			"url" => "{user_input}"
+		),
+		"foursquare" => array (
+			"name" => "Foursquare",
+			"description" => "{user_input} on Foursquare",
+			"option_text" => "Foursquare (username)",
+			"image" => "foursquare.png",
+			"url" => "https://foursquare.com/{user_input}"
 		),
 		"friendfeed" => array (
 			"name" => "FriendFeed",
@@ -238,6 +259,13 @@ class SCFW_Widget extends WP_Widget {
 			"image" => "rss.png",
 			"url" => "{user_input}"
 		),	
+		"skype" => array (
+			"name" => "Skype",
+			"description" => "Call {user_input} on Skype",
+			"option_text" => "Skype (username)",
+			"image" => "skype.png",
+			"url" => "skype:{user_input}?call"
+		),
 		"slashdot" => array (
 			"name" => "Slashdot",
 			"description" => "{user_input} - Slashdot User",
