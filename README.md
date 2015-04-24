@@ -1,13 +1,7 @@
-Subscribe / Connect / Follow Widget v0.5.7
-==========================================
+Subscribe / Connect / Follow Widget
+===================================
 
-A WordPress widget that displays image links (icon buttons) to various subscription services and social networking sites. More than 40 services supported.
-
-
-Description
------------
-
-This plugin provides a widget that displays image links (icon buttons) to various subscription services and social networking sites in your sidebar (or any widget holder). Helps users in easily finding links to subscription services like RSS feed, email subscriptions, podcast, etc., follow the website's Facbeook and Twitter pages, etc., and connect via various social networking sites.
+A [WordPress](https://wordpress.org/) widget that displays image links (icon buttons) to various subscription services and social networking sites in your sidebar (or any widget holder). Helps users in easily finding links to subscription services like RSS feed, email subscriptions, podcast, etc., follow the website's Facbeook and Twitter pages, etc., and connect via various social networking sites.
 
 
 Features
@@ -119,4 +113,5 @@ Links
 
 * [Plugin website](http://srinig.com/wordpress/plugins/subscribe-connect-follow-widget/)
 * [Plugin at the WordPress plugin directory](https://wordpress.org/plugins/subscribe-connect-follow-widget/)
+* [Support](https://wordpress.org/support/plugin/subscribe-connect-follow-widget)
 * [Development at Github](https://github.com/sriniguna/subscribe-connect-follow-widget/)
