@@ -459,7 +459,7 @@ class SCFW_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'hybrid'); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		</p>
 
 
@@ -509,7 +509,7 @@ class SCFW_Widget extends WP_Widget {
 			<option value="0">----SELECT----</option>
 			<?php echo $this->optionlist($instance[$item_i]); ?>
 			</select>
-			<input class="widefat" id="<?php echo $this->get_field_id( $itemval_i ); ?>" name="<?php echo $this->get_field_name( $itemval_i ); ?>" value="<?php echo $instance[$itemval_i]; ?>" style="width:100%;" />
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id( $itemval_i ); ?>" name="<?php echo $this->get_field_name( $itemval_i ); ?>" value="<?php echo $instance[$itemval_i]; ?>" style="width:100%;" />
 		</p>
 		
 		<?php } // for loop ?>
