@@ -380,7 +380,7 @@ class SCFW_Widget extends WP_Widget {
 	function widget( $args, $instance ) {
 		extract( $args );
 
-		$title = apply_filters('widget_title', $instance['title'] );
+		$title = apply_filters('widget_title', esc_attr( $instance['title'] ) );
 
 		$services = $this->services;
 
@@ -394,7 +394,7 @@ class SCFW_Widget extends WP_Widget {
 			
 		for($i = 0; $i < $this->num_items; $i++) {
 			if(!$instance["itemval-{$i}"] || !$instance["item-{$i}"] || $instance["item-{$i}"] == "----SELECT----") continue;
-			$url = str_replace('{user_input}', $instance["itemval-{$i}"], $services[$instance["item-{$i}"]]['url']);
+			$url = str_replace('{user_input}', esc_attr( $instance["itemval-{$i}"] ), $services[$instance["item-{$i}"]]['url']);
 			if( "{user_input}" == $services[$instance["item-{$i}"]]['url'] ) {
 				$url = esc_url( $url );
 			}
@@ -450,7 +450,7 @@ class SCFW_Widget extends WP_Widget {
 		
 		for($i = 0; $i < $this->num_items; $i++) {
 			$instance["item-{$i}"] = $new_instance["item-{$i}"];
-			$instance["itemval-{$i}"] = strip_tags($new_instance["itemval-{$i}"]);
+			$instance["itemval-{$i}"] = esc_attr( strip_tags($new_instance["itemval-{$i}"]) );
 		}
 
 		return $instance;
@@ -478,7 +478,7 @@ class SCFW_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'hybrid'); ?></label>
-			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" style="width:100%;" />
 		</p>
 
 
@@ -534,7 +534,7 @@ class SCFW_Widget extends WP_Widget {
 			<option value="0">----SELECT----</option>
 			<?php echo $this->optionlist($instance[$item_i]); ?>
 			</select>
-			<input type="text" class="widefat" id="<?php echo $this->get_field_id( $itemval_i ); ?>" name="<?php echo $this->get_field_name( $itemval_i ); ?>" value="<?php echo $instance[$itemval_i]; ?>" style="width:100%;" />
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id( $itemval_i ); ?>" name="<?php echo $this->get_field_name( $itemval_i ); ?>" value="<?php echo esc_attr( $instance[$itemval_i] ); ?>" style="width:100%;" />
 		</p>
 		
 		<?php } // for loop ?>
