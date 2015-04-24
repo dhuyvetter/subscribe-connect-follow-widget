@@ -33,7 +33,7 @@ class SCFW_Widget extends WP_Widget {
 			"description" => "Delicious bookmarks",
 			"option_text" => "Delicious (username)",
 			"image" => "delicious.png",
-			"url" => "http://delicious.com/{user_input}"
+			"url" => "https://delicious.com/{user_input}"
 		),
 		"diaspora" => array (
 			"name" => "Diaspora",
@@ -61,7 +61,7 @@ class SCFW_Widget extends WP_Widget {
 			"description" => "Dribbble - {user_input}",
 			"option_text" => "Dribbble (username)",
 			"image" => "dribbble.png",
-			"url" => "http://dribbble.com/{user_input}"
+			"url" => "https://dribbble.com/{user_input}"
 		),
 		"etsy" => array (
 			"name" => "Etsy",
@@ -94,7 +94,7 @@ class SCFW_Widget extends WP_Widget {
 		"flickr" => array (
 			"name" => "Flickr",
 			"description" => "Photos on Flickr",
-			"option_text" => "Flickr (url)",
+			"option_text" => "Flickr (URL)",
 			"image" => "flickr.png",
 			"url" => "{user_input}"
 		),
@@ -125,6 +125,13 @@ class SCFW_Widget extends WP_Widget {
 			"option_text" => "Google Profile (username / user ID)",
 			"image" => "google.png",
 			"url" => "http://profiles.google.com/{user_input}"
+		),
+		"google-plus-username" => array (
+			"name" => "Google+",
+			"description" => "Google+",
+			"option_text" => "Google + (username)",
+			"image" => "google-plus.png",
+			"url" => "https://plus.google.com/+{user_input}"
 		),
 		"google-plus" => array (
 			"name" => "Google+",
@@ -278,7 +285,7 @@ class SCFW_Widget extends WP_Widget {
 			"description" => "Follow {user_input} on Twitter",
 			"option_text" => "Twitter (username)",
 			"image" => "twitter.png",
-			"url" => "http://twitter.com/{user_input}"
+			"url" => "https://twitter.com/{user_input}"
 		),
 		"vimeo" => array (
 			"name" => "Vimeo",
@@ -292,7 +299,7 @@ class SCFW_Widget extends WP_Widget {
 			"description" => "WordPress Profiles - {user_input}",
 			"option_text" => "WordPress.org Profile (username)",
 			"image" => "wordpress.png",
-			"url" => "http://profiles.wordpress.org/{user_input}/"
+			"url" => "https://profiles.wordpress.org/{user_input}/"
 		),
 		"wordpress-blog" => array (
 			"name" => "WordPress.com Blog",
@@ -310,11 +317,19 @@ class SCFW_Widget extends WP_Widget {
 		),
 		"youtube" => array (
 			"name" => "YouTube",
-			"description" => "Subscribe to {user_input}'s channel on YouTube",
+			"description" => "{user_input} - YouTube",
 			"option_text" => "YouTube (username)",
 			"image" => "youtube.png",
-			"url" => "http://www.youtube.com/user/{user_input}"
-		)
+			"url" => "https://www.youtube.com/user/{user_input}"
+		),
+		"youtube-channel" => array (
+			"name" => "YouTube",
+			"description" => "YouTube Channel",
+			"option_text" => "YouTube (channel URL)",
+			"image" => "youtube.png",
+			"url" => "{user_input}"
+		),
+
 	);
 
 	/**
