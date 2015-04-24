@@ -1,13 +1,13 @@
 <?php
-/*
-Plugin Name: Subscribe / Connect / Follow Widget
-Plugin URI: http://srinig.com/wordpress/plugins/subscribe-connect-follow-widget/
-Description: A widget to display image links (icon buttons) to subscription services and social networking sites.
-Version: 0.5.7
-Author: Srini G
-Author URI: http://srinig.com/wordpress/
-License: GPL2
-*/
+/**
+ * Plugin Name: Subscribe / Connect / Follow Widget
+ * Plugin URI: http://srinig.com/wordpress/plugins/subscribe-connect-follow-widget/
+ * Description: A widget to display image links (icon buttons) to subscription services and social networking sites.
+ * Version: 1.0
+ * Author: Srini G
+ * Author URI: http://srinig.com/wordpress/
+ * License: GPL2
+ */
 
 
 add_action( 'widgets_init', 'scfw_load_widgets' );
@@ -149,7 +149,7 @@ class SCFW_Widget extends WP_Widget {
 		),
 		"google-plus-username" => array (
 			"name" => "Google+",
-			"description" => "Google+",
+			"description" => "{user_input} on Google+",
 			"option_text" => "Google + (username)",
 			"image" => "google-plus.png",
 			"url" => "https://plus.google.com/+{user_input}"
