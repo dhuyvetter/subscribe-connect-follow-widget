@@ -12,7 +12,7 @@
 
 class SCFW_Widget extends WP_Widget {
 	
-	private $num_items = 5;
+	private $num_items = 10;
 
 	private $services = array (
 		"behance" => array (
