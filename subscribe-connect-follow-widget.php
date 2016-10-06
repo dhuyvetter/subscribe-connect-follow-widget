@@ -39,9 +39,9 @@ class SCFW_Widget extends WP_Widget {
 		"diaspora" => array (
 			"name" => "Diaspora",
 			"description" => "{user_input} on DIASPORA*",
-			"option_text" => "Diaspora (username)",
+			"option_text" => "Diaspora (URL)",
 			"image" => "diaspora_asterisk.png",
-			"url" => "https://joindiaspora.com/u/{user_input}"
+			"url" => "{user_input}"
 		),
 		"digg" => array (
 			"name" => "Digg",
