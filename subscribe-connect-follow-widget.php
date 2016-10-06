@@ -155,6 +155,13 @@ class SCFW_Widget extends WP_Widget {
 			"image" => "google-plus.png",
 			"url" => "https://plus.google.com/{user_input}"
 		),
+		"hacker-news" => array (
+			"name" => "Hacker News",
+			"description" => "Hacker News",
+			"option_text" => "Hacker News (user ID)",
+			"image" => "hacker-news.png",
+			"url" => "https://news.ycombinator.com/user?id={user_input}"
+		),
 		"identi.ca" => array (
 			"name" => "identi.ca",
 			"description" => "Subscribe to {user_input} on identi.ca",
@@ -168,6 +175,13 @@ class SCFW_Widget extends WP_Widget {
 			"option_text" => "Instagram (username)",
 			"image" => "instagram.png",
 			"url" => "http://instagram.com/{user_input}"
+		),
+		"keybase.io" => array (
+			"name" => "Keybase.io",
+			"description" => "{user_input}'s Profile on Keybase.io",
+			"option_text" => "Keybase.io (username)",
+			"image" => "keybase.png",
+			"url" => "https://keybase.io/{user_input}"
 		),
 		"last.fm" => array (
 			"name" => "Last.fm",
