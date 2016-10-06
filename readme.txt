@@ -180,5 +180,7 @@ v1.0 adds Behance, Email, Foursquare and Skype + new widget option field to spec
 
 = 1.1.0 =
 * Use URL for Diaspora to allow other pod except joindiaspora
-* Added Hacker News. Hacker News icon made from Icon Fonts (http://www.onlinewebfonts.com/icon) is licensed by CC BY 3.0
+* Added Hacker News
 * Added Keybase.io
+* Updated Github icon
+* Changed number of services from 5 to 10
