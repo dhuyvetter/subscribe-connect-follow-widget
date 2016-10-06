@@ -173,7 +173,12 @@ Simply change the value of the 'Number of items' field in the widget options, fo
 = 0.5 (2011-03-21) =
 * Public release
 
-== Upgrade Notice ==
-
 = 1.0.1 =
 v1.0 adds Behance, Email, Foursquare and Skype + new widget option field to specify the number of items + other fixes and improvements. v1.0.1 updates to PHP5 style constructor.
+
+== Upgrade Notice ==
+
+= 1.1.0 =
+* Use URL for Diaspora to allow other pod except joindiaspora
+* Added Hacker News. Hacker News icon made from Icon Fonts (http://www.onlinewebfonts.com/icon) is licensed by CC BY 3.0
+* Added Keybase.io
